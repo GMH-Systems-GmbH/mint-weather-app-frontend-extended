@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html
+    lang="de"
+    data-theme="light"
+>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Wetter App</title>
+        <link
+            rel="stylesheet"
+            href="/src/styles.css"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="app-header">
+                    <h1 id="app-title">Wetter App</h1>
+                    <div class="theme-switch-wrapper">
+                        <label
+                            class="theme-switch"
+                            for="theme-toggle"
+                        >
+                            <input
+                                type="checkbox"
+                                id="theme-toggle"
+                            />
+                            <span class="slider"></span>
+                        </label>
+                        <span
+                            class="dark-mode-icon"
+                            id="theme-icon"
+                            >☀️</span
+                        >
+                    </div>
+                </div>
+                <div class="city-selector">
+                    <select id="city-dropdown">
+                        <option value="">Stadt auswählen...</option>
+                    </select>
+                </div>
+            </header>
+
+            <div
+                id="weather-container"
+                class="hidden"
+            >
+                <div id="current-weather">
+                    <div id="location-info">
+                        <h2 id="city-name"></h2>
+                        <p id="country"></p>
+                    </div>
+
+                    <div id="current-conditions">
+                        <div
+                            id="condition-icon"
+                            class="weather-icon"
+                        ></div>
+                        <div id="condition-details">
+                            <p id="condition-text"></p>
+                            <p id="current-temp"></p>
+                        </div>
+                    </div>
+
+                    <div id="current-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Luftfeuchtigkeit:</span>
+                            <span id="humidity"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Luftdruck:</span>
+                            <span id="pressure"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Wind:</span>
+                            <span id="wind"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="forecast-container">
+                    <h3>3-Tage Vorhersage</h3>
+                    <div id="forecast-cards"></div>
+                </div>
+            </div>
+
+            <div
+                id="loading-indicator"
+                class="hidden"
+            >
+                Daten werden geladen...
+            </div>
+
+            <div
+                id="error-message"
+                class="hidden"
+            >
+                Fehler beim Laden der Wetterdaten. Bitte versuche es später erneut.
+            </div>
+        </div>
+
+        <script src="/src/app.js"></script>
+    </body>
+</html>
