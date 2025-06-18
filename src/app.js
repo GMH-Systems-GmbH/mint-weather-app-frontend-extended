@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showLoading() {
         // AUFGABE 3: Blende die Ladeanzeige ein
-        loadingIndicator.classList.remove('hidden');
+
         errorMessage.classList.add('hidden');
     }
 
